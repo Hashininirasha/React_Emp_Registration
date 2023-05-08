@@ -1,4 +1,4 @@
-# Employee Registration Application 📝
+# Employee Registration Application 👦
 
 ## What is a Employee Registration Application?
 

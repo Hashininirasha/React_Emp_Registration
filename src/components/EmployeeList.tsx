@@ -21,12 +21,15 @@ const EmployeeList = (props: Props) => {
     setShowModal(true);
   };
 
+
+  
   const onCloseModal = () => setShowModal(false);
 
   return (
     <div>
       <article>
         <h3 className="list-header">Employee List</h3>
+        <br></br>
       </article>
       <table>
         <tr>
@@ -53,6 +56,7 @@ const EmployeeList = (props: Props) => {
         
         break;
     }
+    
        
           return (
             <tr key={employee.id}>
@@ -60,13 +64,14 @@ const EmployeeList = (props: Props) => {
               <td>{employee.email}</td>
               <td>{departmentName} </td>
               
+              
               <td>
                 <div>
-                  <input
+                  {/* <input
                     type="button"
                     value="View"
                     onClick={() => viewEmployee(employee)}
-                  />
+                  /> */}
                   <input
                     type="button"
                     value="Delete"

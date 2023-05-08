@@ -62,33 +62,37 @@ export default function AddEmployee(props: AddEmployeeProps) {
             <form onSubmit={onSubmitBtnClickedHdn}>
                 <div>
                     <label>First Name : </label>
-                    <input type="text" value={firstName} onChange={onFirstChangeHdn} required />
+                    <input type="text" value={firstName} onChange={onFirstChangeHdn} pattern="[A-Za-z]+" required />
                 </div>
                 <div>
                     <label>Last Name : </label>
-                    <input type="text" value={lastName} onChange={onLastChangeHdn} required />
+                    <input type="text" value={lastName} onChange={onLastChangeHdn} pattern="[A-Za-z]+" required />
                 </div>
                 <div>
                     <label>Email Add : </label>
-                    <input type="text" value={email} onChange={onEmailChangeHdn} required />
+                    <input type="text" value={email} onChange={onEmailChangeHdn} pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required />
                 </div>
                 <div>
                     <label>Department Add : </label>
                     <div>
-        <label htmlFor="department"></label>
+        <label htmlFor="department"> </label>
         <DepartmentDropdown
          departments={Department}
           value={Number(departmentId)}
-          onChange={(value) => setDepartmentId(value.toString())}
+          onChange={(value) => setDepartmentId(value.toString())
+            
+        }
           
         />
         
       </div>
+      <br></br>
                     {/* <DepartmentDropdown value={Number(departmentId)} onChange={dropdownChangeHdn} departments={}/> */}
                 </div>
                 <div>
-                    <input type="button" value="back" onClick={onBackBtnClickHdn} />
-                    <input type="submit" value="Add Employee" />
+                    <input type="button" value="back" onClick={onBackBtnClickHdn} style={{ backgroundColor: '#6495ED', color: 'white',}} />
+                   
+                    <input type="submit" value="Add Employee" style={{ backgroundColor: '#6495ED', color: 'white'}}/>
                 </div>
             </form>
         </div>

@@ -26,7 +26,7 @@ const DepartmentDropdown: React.FC<Props> = ({ departments, value, onChange }) =
 
   return (
 
-    <div>
+    <div style={{ height: '20px',  paddingLeft: '15px', margin: '5px'}}>
 
 <input
   list="Department"

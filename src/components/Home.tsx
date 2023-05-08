@@ -52,24 +52,29 @@ const Home = () => {
     <>
       <article className="article-header">
         <header>
-          <h1>Emplyee Registration</h1>
+          <h1>Employee  Registration</h1>
         </header>
       </article>
 
       <section className="section-content">
         {shownPage === PageEnum.list && (
           <>
+   
             <input
+            
               type="button"
               value="Add Employee"
               onClick={onAddEmployeeClickHnd}
               className="add-employee-btn"
+              style={{ backgroundColor: '#6495ED', color: 'white',}}
             />
+          
             <EmployeeList
               list={employeeList}
               onDeleteClickHnd={deleteEmployee}
              
             />
+            <br></br>
           </>
         )}
 
